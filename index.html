@@ -11,6 +11,8 @@
 
   <style>
     .center {
+      position: relative;
+      z-index: 2;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -28,17 +30,25 @@
       background: linear-gradient(135deg, #38bdf8, #6366f1);
       color: white;
       font-weight: 600;
-      font-size: 14px;
       box-shadow: 0 10px 30px rgba(56,189,248,0.3);
     }
 
     .shapes {
       position: absolute;
-      bottom: 30px;
-      right: 50%;
-      transform: translateX(50%);
-      width: 320px;
-      height: 200px;
+      bottom: 20px;
+      right: 10px;
+      width: 260px;
+      height: 180px;
+      z-index: 1;
+    }
+
+    @media (max-width: 600px) {
+      .shapes {
+        width: 200px;
+        height: 140px;
+        right: 5px;
+        bottom: 10px;
+      }
     }
   </style>
 
@@ -59,8 +69,7 @@
 
         <h1 style="
           color:#e2e8f0;
-          font-size:2.8rem;
-          line-height:1.2;
+          font-size:2.4rem;
           margin-top:10px;
         ">
           Feira Tecnológica
@@ -72,25 +81,25 @@
 
       </div>
 
-      <!-- FORMAS MAIORES -->
+      <!-- FORMAS NA DIREITA -->
       <div class="shapes">
 
         <!-- brilho -->
         <div style="
           position:absolute;
-          width:250px;
-          height:250px;
+          width:200px;
+          height:200px;
           background: radial-gradient(circle, rgba(99,102,241,0.4), transparent);
           bottom:0;
-          right:35px;
+          right:0;
         "></div>
 
         <!-- laranja -->
         <div style="
-          width:140px;
-          height:90px;
+          width:110px;
+          height:75px;
           background:#fb923c;
-          border-radius:80px 80px 0 0;
+          border-radius:60px 60px 0 0;
           position:absolute;
           bottom:0;
           left:0;
@@ -98,35 +107,35 @@
 
         <!-- roxo -->
         <div style="
-          width:70px;
-          height:140px;
+          width:60px;
+          height:120px;
           background:linear-gradient(180deg,#7c3aed,#4f46e5);
           position:absolute;
           bottom:0;
-          left:90px;
+          left:80px;
           transform:rotate(-8deg);
           border-radius:10px;
         "></div>
 
         <!-- preto -->
         <div style="
-          width:50px;
-          height:120px;
+          width:40px;
+          height:100px;
           background:#020617;
           position:absolute;
           bottom:0;
-          left:150px;
+          left:130px;
           border-radius:10px;
         "></div>
 
         <!-- amarelo -->
         <div style="
-          width:80px;
-          height:110px;
+          width:65px;
+          height:90px;
           background:#facc15;
           position:absolute;
           bottom:0;
-          left:190px;
+          left:160px;
           border-radius:40px;
         "></div>
 
@@ -166,8 +175,7 @@
     hash: true,
     transition: 'fade',
     backgroundTransition: 'fade',
-    speed: 'slow',
-    easing: 'ease-in-out'
+    speed: 'slow'
   });
 </script>
 
