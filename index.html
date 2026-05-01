@@ -10,43 +10,36 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
 
   <style>
-    .container {
+    .center {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
       height: 100%;
-      padding: 40px;
+      text-align: center;
+      padding: 30px;
     }
 
     .btn {
-      margin-top: 30px;
-      padding: 12px 22px;
+      margin-top: 25px;
+      padding: 12px 24px;
       border: none;
-      border-radius: 12px;
+      border-radius: 14px;
       background: linear-gradient(135deg, #38bdf8, #6366f1);
       color: white;
       font-weight: 600;
-      box-shadow: 0 10px 25px rgba(56,189,248,0.3);
-      cursor: pointer;
-      transition: transform 0.2s;
+      font-size: 14px;
+      box-shadow: 0 10px 30px rgba(56,189,248,0.3);
     }
 
-    .btn:hover {
-      transform: scale(1.05);
+    .shapes {
+      position: absolute;
+      bottom: 30px;
+      right: 50%;
+      transform: translateX(50%);
+      width: 320px;
+      height: 200px;
     }
-
-    /* Animação de flutuação para os elementos gráficos */
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-15px); }
-    }
-
-    .floating-shape {
-      animation: float 4s ease-in-out infinite;
-    }
-
-    .shape-delay-1 { animation-delay: 0.5s; }
-    .shape-delay-2 { animation-delay: 1s; }
   </style>
 
 </head>
@@ -55,40 +48,102 @@
 <div class="reveal">
   <div class="slides">
 
+    <!-- SLIDE 1 -->
     <section data-background="#071226">
-      <div class="container">
+
+      <div class="center">
+
         <span style="color:#38bdf8; font-size:12px; letter-spacing:2px;">
           EVENTO SENAI
         </span>
 
-        <h1 style="color:#e2e8f0; font-size:2.5rem; line-height:1.1; margin:10px 0;">
-          Feira<br>Tecnológica
+        <h1 style="
+          color:#e2e8f0;
+          font-size:2.8rem;
+          line-height:1.2;
+          margin-top:10px;
+        ">
+          Feira Tecnológica
         </h1>
-
-        <p class="fragment" style="color:#94a3b8; max-width:280px;">
-          Inovação, prática e conexão com o futuro
-        </p>
 
         <button class="btn" onclick="Reveal.slide(1)">
           Começar →
         </button>
 
-        <div style="position:absolute; bottom:30px; right:20px; width:240px; height:160px;">
-          <div style="position:absolute; width:180px; height:180px; background: radial-gradient(circle, rgba(99,102,241,0.4), transparent); right:0; bottom:0;"></div>
-
-          <div class="floating-shape" style="width:100px;height:70px;background:#fb923c;border-radius:60px 60px 0 0;position:absolute;bottom:0;"></div>
-          <div class="floating-shape shape-delay-1" style="width:50px;height:100px;background:linear-gradient(180deg,#7c3aed,#4f46e5);position:absolute;bottom:0;left:60px;border-radius:8px;"></div>
-          <div class="floating-shape shape-delay-2" style="width:35px;height:90px;background:#020617;position:absolute;bottom:0;left:100px;border-radius:8px;"></div>
-          <div class="floating-shape" style="width:55px;height:80px;background:#facc15;position:absolute;bottom:0;left:130px;border-radius:30px;"></div>
-        </div>
       </div>
+
+      <!-- FORMAS MAIORES -->
+      <div class="shapes">
+
+        <!-- brilho -->
+        <div style="
+          position:absolute;
+          width:250px;
+          height:250px;
+          background: radial-gradient(circle, rgba(99,102,241,0.4), transparent);
+          bottom:0;
+          right:35px;
+        "></div>
+
+        <!-- laranja -->
+        <div style="
+          width:140px;
+          height:90px;
+          background:#fb923c;
+          border-radius:80px 80px 0 0;
+          position:absolute;
+          bottom:0;
+          left:0;
+        "></div>
+
+        <!-- roxo -->
+        <div style="
+          width:70px;
+          height:140px;
+          background:linear-gradient(180deg,#7c3aed,#4f46e5);
+          position:absolute;
+          bottom:0;
+          left:90px;
+          transform:rotate(-8deg);
+          border-radius:10px;
+        "></div>
+
+        <!-- preto -->
+        <div style="
+          width:50px;
+          height:120px;
+          background:#020617;
+          position:absolute;
+          bottom:0;
+          left:150px;
+          border-radius:10px;
+        "></div>
+
+        <!-- amarelo -->
+        <div style="
+          width:80px;
+          height:110px;
+          background:#facc15;
+          position:absolute;
+          bottom:0;
+          left:190px;
+          border-radius:40px;
+        "></div>
+
+      </div>
+
     </section>
 
+    <!-- SLIDE 2 -->
     <section data-background="#0f172a">
-      <div style="padding:40px;">
-        <h2 style="color:#38bdf8;">Objetivo do Evento</h2>
-        
-        <p class="fragment fade-up" style="color:#e2e8f0;">
+
+      <div style="padding:40px; text-align:center;">
+
+        <h2 style="color:#38bdf8;">
+          Objetivo do Evento
+        </h2>
+
+        <p style="color:#e2e8f0;">
           Apresentar experiências práticas e tecnológicas, promovendo a interação
           entre alunos, visitantes e diferentes áreas industriais do SENAI.
         </p>
@@ -96,7 +151,9 @@
         <button class="btn" onclick="Reveal.slide(0)">
           ← Voltar
         </button>
+
       </div>
+
     </section>
 
   </div>
@@ -107,11 +164,10 @@
 <script>
   Reveal.initialize({
     hash: true,
-    transition: 'convex', // Mudei para convex para dar um efeito mais 3D entre slides
+    transition: 'fade',
     backgroundTransition: 'fade',
-    controls: true,       // Setas visíveis
-    progress: true,       // Barra de progresso visível
-    center: true
+    speed: 'slow',
+    easing: 'ease-in-out'
   });
 </script>
 
