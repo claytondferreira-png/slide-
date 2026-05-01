@@ -1,4 +1,4 @@
-        <!doctype html>
+            <!doctype html>
 <html lang="pt-br">
 <head>
   <meta charset="utf-8">
@@ -11,85 +11,101 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
 
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
+
 </head>
 <body>
 
 <div class="reveal">
   <div class="slides">
 
-    <!-- SLIDE 1 -->
-    <section data-background="#f8fafc">
+    <!-- SLIDE 1 (RESPONSIVO) -->
+    <section data-background="#0f172a">
 
-      <div style="display: flex; align-items: center; justify-content: space-between; height: 100%;">
+      <div style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+        padding: 40px;
+      ">
 
-        <!-- TEXTO -->
-        <div style="width: 50%;">
-          <h1 style="color: #0f172a;">Feira Tecnológica SENAI</h1>
-          <p style="color: #475569;">Inovação, prática e conexão com o futuro</p>
-        </div>
+        <!-- TÍTULO -->
+        <h1 style="
+          color: #e2e8f0;
+          font-size: 2.2rem;
+          line-height: 1.2;
+          margin-bottom: 20px;
+        ">
+          Feira Tecnológica SENAI
+        </h1>
+
+        <!-- SUBTEXTO -->
+        <p style="
+          color: #94a3b8;
+          font-size: 1rem;
+          max-width: 300px;
+        ">
+          Inovação, prática e conexão com o futuro
+        </p>
 
         <!-- BONECOS -->
-        <div style="width: 50%; position: relative; height: 300px;">
+        <div style="
+          position: absolute;
+          bottom: 30px;
+          right: 20px;
+          height: 140px;
+          width: 200px;
+        ">
 
           <!-- LARANJA -->
           <div style="
-            width: 180px;
-            height: 120px;
+            width: 100px;
+            height: 70px;
             background: #fb923c;
-            border-radius: 100px 100px 0 0;
+            border-radius: 60px 60px 0 0;
             position: absolute;
             bottom: 0;
             left: 0;">
-            <div style="display:flex; gap:8px; justify-content:center; margin-top:40px;">
-              <div style="width:8px;height:8px;background:black;border-radius:50%;"></div>
-              <div style="width:8px;height:8px;background:black;border-radius:50%;"></div>
-              <div style="width:8px;height:8px;background:black;border-radius:50%;"></div>
-            </div>
           </div>
 
           <!-- ROXO -->
           <div style="
-            width: 90px;
-            height: 180px;
+            width: 50px;
+            height: 100px;
             background: linear-gradient(180deg, #7c3aed, #4f46e5);
             position: absolute;
             bottom: 0;
-            left: 120px;
+            left: 60px;
             transform: rotate(-10deg);
-            border-radius: 10px;">
-            <div style="display:flex; justify-content:space-around; margin-top:20px;">
-              <div style="width:8px;height:8px;background:black;border-radius:50%;"></div>
-              <div style="width:8px;height:8px;background:black;border-radius:50%;"></div>
-            </div>
+            border-radius: 8px;">
           </div>
 
           <!-- PRETO -->
           <div style="
-            width: 60px;
-            height: 150px;
+            width: 35px;
+            height: 90px;
             background: #020617;
             position: absolute;
             bottom: 0;
-            left: 190px;
-            border-radius: 10px;">
-            <div style="display:flex; justify-content:space-around; margin-top:20px;">
-              <div style="width:8px;height:8px;background:white;border-radius:50%;"></div>
-              <div style="width:8px;height:8px;background:white;border-radius:50%;"></div>
-            </div>
+            left: 100px;
+            border-radius: 8px;">
           </div>
 
           <!-- AMARELO -->
           <div style="
-            width: 90px;
-            height: 140px;
+            width: 55px;
+            height: 80px;
             background: #facc15;
             position: absolute;
             bottom: 0;
-            left: 240px;
-            border-radius: 50px;">
-            <div style="display:flex; justify-content:center; margin-top:20px;">
-              <div style="width:20px;height:4px;background:black;"></div>
-            </div>
+            left: 130px;
+            border-radius: 30px;">
           </div>
 
         </div>
