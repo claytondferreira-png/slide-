@@ -1,4 +1,4 @@
-<!doctype html>
+      <!doctype html>
 <html lang="pt-br">
 <head>
   <meta charset="utf-8">
@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
 
   <style>
+    .reveal {
+      font-size: 18px;
+    }
+
     .center {
       position: relative;
       z-index: 2;
@@ -69,7 +73,7 @@
 
         <h1 style="
           color:#e2e8f0;
-          font-size:2.4rem;
+          font-size:2.6rem;
           margin-top:10px;
         ">
           Feira Tecnológica
@@ -84,7 +88,6 @@
       <!-- FORMAS NA DIREITA -->
       <div class="shapes">
 
-        <!-- brilho -->
         <div style="
           position:absolute;
           width:200px;
@@ -94,50 +97,13 @@
           right:0;
         "></div>
 
-        <!-- laranja -->
-        <div style="
-          width:110px;
-          height:75px;
-          background:#fb923c;
-          border-radius:60px 60px 0 0;
-          position:absolute;
-          bottom:0;
-          left:0;
-        "></div>
+        <div style="width:110px;height:75px;background:#fb923c;border-radius:60px 60px 0 0;position:absolute;bottom:0;"></div>
 
-        <!-- roxo -->
-        <div style="
-          width:60px;
-          height:120px;
-          background:linear-gradient(180deg,#7c3aed,#4f46e5);
-          position:absolute;
-          bottom:0;
-          left:80px;
-          transform:rotate(-8deg);
-          border-radius:10px;
-        "></div>
+        <div style="width:60px;height:120px;background:linear-gradient(180deg,#7c3aed,#4f46e5);position:absolute;bottom:0;left:80px;transform:rotate(-8deg);border-radius:10px;"></div>
 
-        <!-- preto -->
-        <div style="
-          width:40px;
-          height:100px;
-          background:#020617;
-          position:absolute;
-          bottom:0;
-          left:130px;
-          border-radius:10px;
-        "></div>
+        <div style="width:40px;height:100px;background:#020617;position:absolute;bottom:0;left:130px;border-radius:10px;"></div>
 
-        <!-- amarelo -->
-        <div style="
-          width:65px;
-          height:90px;
-          background:#facc15;
-          position:absolute;
-          bottom:0;
-          left:160px;
-          border-radius:40px;
-        "></div>
+        <div style="width:65px;height:90px;background:#facc15;position:absolute;bottom:0;left:160px;border-radius:40px;"></div>
 
       </div>
 
@@ -175,7 +141,13 @@
     hash: true,
     transition: 'fade',
     backgroundTransition: 'fade',
-    speed: 'slow'
+    speed: 'slow',
+
+    width: "100%",
+    height: "100%",
+    margin: 0.05,
+    minScale: 1,
+    maxScale: 1
   });
 </script>
 
